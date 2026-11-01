@@ -33,7 +33,7 @@ La colección está organizada para avanzar desde métricas de clasificación ha
 
 | Nº | Tema | Contenido principal |
 | --- | --- | --- |
-| 01 | Métricas de equidad desde cero | Statistical parity, equal opportunity, equalized odds, predictive parity y umbrales de decisión |
+| 01 | Métricas de equidad | Statistical parity, equal opportunity, equalized odds, predictive parity y umbrales de decisión |
 | 02 | Homofilia y sesgo estructural | Mezcla entre grupos, assortativity y estructura de vecindarios |
 | 03 | Propagación del sesgo en GNN | Agregación de mensajes y comparación entre arquitecturas |
 | 04 | FairDrop y edición de aristas | Intervenciones sobre la estructura y sus efectos |
