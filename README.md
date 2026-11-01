@@ -1,57 +1,86 @@
 # Fairness in Graph-Based Learning
 
-## Atlas y notebooks sobre equidad en aprendizaje basado en grafos
+**Atlas interactivo sobre equidad en aprendizaje basado en grafos**
 
-![Fairness in Graph-Based Learning](./og-cover.png)
+[![Portada de Fairness in Graph-Based Learning](og-cover.png)](https://marcofmayta.github.io/Fairness-in-GBL-MM/)
 
-[Explorar el atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/) · [Ver el código](https://github.com/marcofmayta/Fairness-in-GBL-MM)
-
----
-
-## Sobre el proyecto
-
-Los modelos de aprendizaje basado en grafos aprovechan las relaciones entre observaciones para tareas como clasificación de nodos, predicción de enlaces y aprendizaje de representaciones. Sin embargo, esas mismas relaciones pueden contener patrones de segregación, homofilia o desigualdad que terminan influyendo en las predicciones y en la distribución de errores entre grupos.
-
-Este repositorio reúne material para estudiar **fairness** en **Graph-Based Learning (GBL)**, desde las definiciones estadísticas de equidad hasta los mecanismos por los que el sesgo puede aparecer en atributos, etiquetas, estructura del grafo o procesos de entrenamiento.
-
-El proyecto tiene dos componentes principales:
-
-1. **Un atlas web interactivo**, orientado a la exploración conceptual del campo.  
-2. **Una colección progresiva de notebooks**, pensada para desarrollar experimentos didácticos y reproducibles.
+**[Explorar el atlas interactivo](https://marcofmayta.github.io/Fairness-in-GBL-MM/)** · [Código fuente](https://github.com/marcofmayta/Fairness-in-GBL-MM) · [Bibliografía en el atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/#literatura)
 
 ---
 
-## Qué ofrece este repositorio
+## Presentación
 
-- Atlas interactivo con conceptos, taxonomías, fórmulas y referencias.
-- Simulaciones didácticas sobre homofilia, propagación e intervenciones estructurales.
-- Explorador de métricas de equidad.
-- Hoja de ruta de notebooks para profundizar en experimentos y ejemplos reproducibles.
-- Recurso orientado a aprendizaje, docencia y exploración inicial del área.
+Los modelos de aprendizaje basado en grafos utilizan tanto los atributos de las observaciones como las relaciones entre ellas. Esa información estructural puede mejorar tareas como la clasificación de nodos o la predicción de enlaces, pero también puede incorporar y propagar desigualdades presentes en los datos.
 
----
+**Fairness in Graph-Based Learning** reúne conceptos, formulaciones, métodos y referencias para estudiar la equidad algorítmica en este contexto. Su objetivo es facilitar la exploración del campo, desde las métricas de clasificación hasta los efectos de la homofilia y de la propagación de mensajes en redes neuronales de grafos (*Graph Neural Networks*, GNNs).
 
-## Atlas interactivo
+El proyecto comprende un **atlas web interactivo** y una **colección progresiva de notebooks didácticos**. El atlas puede utilizarse directamente desde el navegador, sin instalación.
 
-**[Abrir Fairness in GBL](https://marcofmayta.github.io/Fairness-in-GBL-MM/)**
+## Contenido del atlas
 
-El atlas presenta una organización temática del campo, con explicaciones, fórmulas, referencias y visualizaciones interactivas. Incluye:
+El recorrido está organizado en **6 ejes temáticos, 24 subáreas y 72 temas específicos**. Combina explicaciones breves, expresiones matemáticas, bibliografía y recursos para experimentar con conceptos fundamentales.
 
-- Definiciones de equidad grupal, individual y contrafactual.
-- Fuentes de sesgo en atributos, etiquetas y estructura del grafo.
-- Homofilia, agregación de vecinos y propagación de información.
-- Métodos de mitigación antes, durante y después del entrenamiento.
-- Métricas de evaluación y sus posibles incompatibilidades.
-- Simulaciones didácticas, glosario y bibliografía consultable.
+| Recurso | Qué permite explorar |
+| --- | --- |
+| **Taxonomía interactiva** | Navegar entre ejes, subáreas y conceptos relacionados con fairness en grafos. |
+| **Fundamentos** | Repasar representación de grafos, agregación de vecinos, predicción y criterios de equidad. |
+| **Simulador de redes** | Modificar la preferencia de conexión entre grupos, las capas de propagación y el descarte de aristas en una red sintética. |
+| **Explorador de métricas** | Comparar *statistical parity*, *equal opportunity*, *equalized odds* y valor predictivo positivo bajo distintos escenarios. |
+| **Métodos de mitigación** | Identificar intervenciones sobre los datos, la estructura, el entrenamiento y las predicciones. |
+| **Biblioteca de literatura** | Buscar y filtrar referencias vinculadas con el campo. |
+| **Glosario y cuestionario** | Repasar conceptos y comprobar su comprensión. |
 
-> **Nota:** las simulaciones del atlas son ilustrativas; no constituyen por sí mismas resultados empíricos de un estudio experimental.
+### Simulaciones y alcance
 
----
+Las visualizaciones del atlas tienen **propósitos educativos**. El simulador emplea datos sintéticos y reglas simplificadas de difusión; **no entrena una GNN real** ni reproduce integralmente métodos de investigación como FairDrop. Sus resultados no deben interpretarse como evidencia empírica de superioridad de un algoritmo ni como conclusiones transferibles a aplicaciones reales.
 
-## Vista rápida
+Las métricas de equidad ilustran criterios distintos, que pueden entrar en conflicto. Su interpretación depende de las tasas base, de los grupos considerados, del umbral de decisión y del contexto de uso.
 
-Puedes añadir aquí una captura o animación del atlas.
+## Notebooks: itinerario de trabajo
 
-### Opción 1: captura estática
-```md
-![Vista previa del atlas](./assets/atlas-preview.png)
+La colección de notebooks complementa el atlas con ejercicios y experimentos reproducibles. El itinerario contempla los siguientes temas; la disponibilidad de los cuadernos se actualizará conforme se publiquen.
+
+| Nº | Tema | Enfoque previsto |
+| :---: | --- | --- |
+| 01 | Métricas de equidad | Paridad estadística, igualdad de oportunidad, igualdad de probabilidades, valor predictivo positivo y umbrales. |
+| 02 | Homofilia y sesgo estructural | Mezcla entre grupos, asortatividad y composición de vecindarios. |
+| 03 | Propagación del sesgo en GNNs | Agregación de mensajes y comparación de arquitecturas. |
+| 04 | FairDrop y edición de aristas | Modificación de la estructura y evaluación de sus efectos. |
+| 05 | Regularización y optimización multiobjetivo | Compromisos entre desempeño predictivo y equidad. |
+| 06 | Equidad individual y contrafactual | Similitud entre individuos y supuestos contrafactuales. |
+| 07 | Equidad en predicción de enlaces | Desigualdades en la formación y predicción de conexiones. |
+| 08 | Equidad ante cambios de distribución | Robustez y transferencia frente a variaciones en los datos y el grafo. |
+
+Los notebooks se incorporan progresivamente al repositorio, con sus dependencias, datos e instrucciones de ejecución.
+
+## Cómo utilizarlo
+
+**En línea:** abre [Fairness in Graph-Based Learning](https://marcofmayta.github.io/Fairness-in-GBL-MM/) desde un navegador de escritorio o móvil.
+
+**En local:** clona el repositorio y abre `index.html` en un navegador:
+
+```bash
+git clone https://github.com/marcofmayta/Fairness-in-GBL-MM.git
+cd Fairness-in-GBL-MM
+```
+
+El atlas es una página estática y se puede consultar sin instalar Python ni configurar un servidor. Los notebooks cuentan con instrucciones específicas cuando están disponibles.
+
+## Bibliografía inicial
+
+Estas lecturas ofrecen una introducción a las definiciones y tensiones entre distintos criterios de equidad:
+
+- Hardt, M., Price, E., & Srebro, N. (2016). [*Equality of Opportunity in Supervised Learning*](https://arxiv.org/abs/1610.02413).
+- Barocas, S., Hardt, M., & Narayanan, A. [*Fairness and Machine Learning: Limitations and Opportunities*](https://fairmlbook.org/).
+
+La [biblioteca del atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/#literatura) contiene referencias adicionales sobre aprendizaje basado en grafos y equidad algorítmica. Las fichas son material de orientación y no sustituyen la lectura de los artículos originales.
+
+## Autor
+
+**Marco Mayta**
+
+[GitHub](https://github.com/marcofmayta) · [LinkedIn](https://www.linkedin.com/in/marco-mayta-835781170/) · [ORCID](https://orcid.org/0009-0009-6019-2925)
+
+## Licencia
+
+El código del repositorio se distribuye bajo la [licencia MIT](LICENSE). Las publicaciones y materiales de terceros enlazados conservan sus respectivas condiciones de uso.
