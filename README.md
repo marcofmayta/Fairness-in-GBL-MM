@@ -1,79 +1,71 @@
 # Fairness in Graph-Based Learning
 
-**Atlas interactivo sobre equidad en aprendizaje basado en grafos**
+**Un atlas interactivo para estudiar la equidad en el aprendizaje basado en grafos.**
 
-[![Portada de Fairness in Graph-Based Learning](og-cover.png)](https://marcofmayta.github.io/Fairness-in-GBL-MM/)
+[![Fairness in Graph-Based Learning](og-cover.png)](https://marcofmayta.github.io/Fairness-in-GBL-MM/)
 
-**[Explorar el atlas interactivo](https://marcofmayta.github.io/Fairness-in-GBL-MM/)** · [Código fuente](https://github.com/marcofmayta/Fairness-in-GBL-MM) · [Bibliografía en el atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/#literatura)
+[Explorar el atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/) · [Código fuente](https://github.com/marcofmayta/Fairness-in-GBL-MM) · [Consultar la bibliografía](https://marcofmayta.github.io/Fairness-in-GBL-MM/#literatura)
 
----
+## Sobre el proyecto
 
-## Presentación
+En el aprendizaje basado en grafos, una predicción no depende solo de las características de un nodo. También intervienen sus vecinos y la forma en que están conectados. Esto permite aprovechar información que los modelos tradicionales no siempre capturan, pero plantea un problema: las relaciones de una red también pueden reflejar desigualdades, segregación o sesgos presentes en los datos.
 
-Los modelos de aprendizaje basado en grafos utilizan tanto los atributos de las observaciones como las relaciones entre ellas. Esa información estructural puede mejorar tareas como la clasificación de nodos o la predicción de enlaces, pero también puede incorporar y propagar desigualdades presentes en los datos.
+Preparé este atlas para reunir y explicar conceptos que suelen estudiarse por separado: métricas de equidad, homofilia, propagación de mensajes, fuentes de sesgo y métodos para mitigarlo. La idea es poder pasar de una definición a una fórmula y, cuando sea posible, observar su comportamiento en un ejemplo interactivo.
 
-**Fairness in Graph-Based Learning** reúne conceptos, formulaciones, métodos y referencias para estudiar la equidad algorítmica en este contexto. Su objetivo es facilitar la exploración del campo, desde las métricas de clasificación hasta los efectos de la homofilia y de la propagación de mensajes en redes neuronales de grafos (*Graph Neural Networks*, GNNs).
+El sitio está pensado para estudiantes, docentes e investigadores que trabajan con aprendizaje automático y grafos. No requiere instalación.
 
-El proyecto comprende un **atlas web interactivo** y una **colección progresiva de notebooks didácticos**. El atlas puede utilizarse directamente desde el navegador, sin instalación.
+## Qué encontrarás en el atlas
 
-## Contenido del atlas
+El contenido se distribuye en **6 ejes, 24 subáreas y 72 temas**.
 
-El recorrido está organizado en **6 ejes temáticos, 24 subáreas y 72 temas específicos**. Combina explicaciones breves, expresiones matemáticas, bibliografía y recursos para experimentar con conceptos fundamentales.
-
-| Recurso | Qué permite explorar |
+| Sección | Contenido |
 | --- | --- |
-| **Taxonomía interactiva** | Navegar entre ejes, subáreas y conceptos relacionados con fairness en grafos. |
-| **Fundamentos** | Repasar representación de grafos, agregación de vecinos, predicción y criterios de equidad. |
-| **Simulador de redes** | Modificar la preferencia de conexión entre grupos, las capas de propagación y el descarte de aristas en una red sintética. |
-| **Explorador de métricas** | Comparar *statistical parity*, *equal opportunity*, *equalized odds* y valor predictivo positivo bajo distintos escenarios. |
-| **Métodos de mitigación** | Identificar intervenciones sobre los datos, la estructura, el entrenamiento y las predicciones. |
-| **Biblioteca de literatura** | Buscar y filtrar referencias vinculadas con el campo. |
-| **Glosario y cuestionario** | Repasar conceptos y comprobar su comprensión. |
+| **Fundamentos** | Grafos, agregación de mensajes, predicción y criterios de equidad. |
+| **Taxonomía** | Un mapa de conceptos para recorrer las áreas y sus relaciones. |
+| **Simulador** | Una red sintética en la que puedes modificar la preferencia de conexión entre grupos, la profundidad de propagación y el descarte de aristas. |
+| **Métricas** | Comparaciones entre *statistical parity*, *equal opportunity*, *equalized odds* y valor predictivo positivo. |
+| **Métodos** | Técnicas que actúan sobre los datos, la estructura del grafo, el entrenamiento o las predicciones. |
+| **Literatura** | Referencias científicas con opciones de búsqueda y filtrado. |
+| **Glosario y preguntas** | Definiciones y ejercicios para repasar lo aprendido. |
 
-### Simulaciones y alcance
+### Sobre las simulaciones
 
-Las visualizaciones del atlas tienen **propósitos educativos**. El simulador emplea datos sintéticos y reglas simplificadas de difusión; **no entrena una GNN real** ni reproduce integralmente métodos de investigación como FairDrop. Sus resultados no deben interpretarse como evidencia empírica de superioridad de un algoritmo ni como conclusiones transferibles a aplicaciones reales.
+El simulador utiliza datos sintéticos y reglas simplificadas de difusión. No entrena una red neuronal de grafos ni implementa por completo métodos como FairDrop. Sirve para observar relaciones entre estructura, propagación y resultados de clasificación, no para comparar el rendimiento real de algoritmos.
 
-Las métricas de equidad ilustran criterios distintos, que pueden entrar en conflicto. Su interpretación depende de las tasas base, de los grupos considerados, del umbral de decisión y del contexto de uso.
+Las diferencias entre métricas también requieren cuidado: una brecha pequeña bajo un criterio no garantiza equidad bajo los demás. Las tasas base, el umbral de decisión y el contexto influyen en la interpretación.
 
-## Notebooks: itinerario de trabajo
+## Notebooks
 
-La colección de notebooks complementa el atlas con ejercicios y experimentos reproducibles. El itinerario contempla los siguientes temas; la disponibilidad de los cuadernos se actualizará conforme se publiquen.
+El atlas se complementa con una serie de notebooks. Los temas previstos son los siguientes; cada cuaderno estará disponible en el repositorio cuando se publique.
 
-| Nº | Tema | Enfoque previsto |
+| Nº | Tema | Contenido |
 | :---: | --- | --- |
-| 01 | Métricas de equidad | Paridad estadística, igualdad de oportunidad, igualdad de probabilidades, valor predictivo positivo y umbrales. |
-| 02 | Homofilia y sesgo estructural | Mezcla entre grupos, asortatividad y composición de vecindarios. |
-| 03 | Propagación del sesgo en GNNs | Agregación de mensajes y comparación de arquitecturas. |
-| 04 | FairDrop y edición de aristas | Modificación de la estructura y evaluación de sus efectos. |
-| 05 | Regularización y optimización multiobjetivo | Compromisos entre desempeño predictivo y equidad. |
+| 01 | Métricas de equidad | Paridad estadística, igualdad de oportunidad, *equalized odds*, valor predictivo positivo y umbrales. |
+| 02 | Homofilia y sesgo estructural | Conexiones entre grupos, asortatividad y composición de vecindarios. |
+| 03 | Propagación del sesgo en GNNs | Agregación de mensajes y diferencias entre arquitecturas. |
+| 04 | FairDrop y edición de aristas | Intervenciones sobre las conexiones y sus efectos. |
+| 05 | Regularización y optimización multiobjetivo | Relación entre desempeño predictivo y equidad. |
 | 06 | Equidad individual y contrafactual | Similitud entre individuos y supuestos contrafactuales. |
-| 07 | Equidad en predicción de enlaces | Desigualdades en la formación y predicción de conexiones. |
-| 08 | Equidad ante cambios de distribución | Robustez y transferencia frente a variaciones en los datos y el grafo. |
+| 07 | Equidad en predicción de enlaces | Sesgos en la formación y predicción de relaciones. |
+| 08 | Equidad ante cambios de distribución | Robustez y transferencia cuando cambian los datos o la estructura. |
 
-Los notebooks se incorporan progresivamente al repositorio, con sus dependencias, datos e instrucciones de ejecución.
+## Cómo acceder
 
-## Cómo utilizarlo
-
-**En línea:** abre [Fairness in Graph-Based Learning](https://marcofmayta.github.io/Fairness-in-GBL-MM/) desde un navegador de escritorio o móvil.
-
-**En local:** clona el repositorio y abre `index.html` en un navegador:
+Puedes usar el [atlas en línea](https://marcofmayta.github.io/Fairness-in-GBL-MM/) desde el navegador. Para abrir una copia local:
 
 ```bash
 git clone https://github.com/marcofmayta/Fairness-in-GBL-MM.git
 cd Fairness-in-GBL-MM
 ```
 
-El atlas es una página estática y se puede consultar sin instalar Python ni configurar un servidor. Los notebooks cuentan con instrucciones específicas cuando están disponibles.
+Después, abre `index.html`. La página funciona sin instalar Python. Los notebooks tendrán sus propias dependencias e instrucciones de ejecución.
 
-## Bibliografía inicial
-
-Estas lecturas ofrecen una introducción a las definiciones y tensiones entre distintos criterios de equidad:
+## Lecturas de referencia
 
 - Hardt, M., Price, E., & Srebro, N. (2016). [*Equality of Opportunity in Supervised Learning*](https://arxiv.org/abs/1610.02413).
 - Barocas, S., Hardt, M., & Narayanan, A. [*Fairness and Machine Learning: Limitations and Opportunities*](https://fairmlbook.org/).
 
-La [biblioteca del atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/#literatura) contiene referencias adicionales sobre aprendizaje basado en grafos y equidad algorítmica. Las fichas son material de orientación y no sustituyen la lectura de los artículos originales.
+En la sección [Literatura](https://marcofmayta.github.io/Fairness-in-GBL-MM/#literatura) del atlas hay más trabajos sobre equidad algorítmica y aprendizaje en grafos. Las fichas ofrecen una introducción a cada referencia; para profundizar en un método o resultado es necesario consultar el artículo original.
 
 ## Autor
 
@@ -83,4 +75,4 @@ La [biblioteca del atlas](https://marcofmayta.github.io/Fairness-in-GBL-MM/#lite
 
 ## Licencia
 
-El código del repositorio se distribuye bajo la [licencia MIT](LICENSE). Las publicaciones y materiales de terceros enlazados conservan sus respectivas condiciones de uso.
+El código se distribuye bajo la [licencia MIT](LICENSE). Las publicaciones enlazadas pertenecen a sus respectivos autores.
